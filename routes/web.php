@@ -12,9 +12,9 @@
 */
 
 // Site route
-Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
+//Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
 
-//Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
+Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
 //github项目
 Route::get('/projects', ['uses' => 'HomeController@projects', 'as' => 'projects']);
 //搜索
@@ -36,7 +36,6 @@ Route::get('/readNotification/{id}', ['uses' => 'UserController@readNotification
 Route::patch('/user/upload/avatar', ['uses' => 'UserController@uploadAvatar', 'as' => 'user.upload.avatar']);
 Route::patch('/user/upload/profile', ['uses' => 'UserController@uploadProfile', 'as' => 'user.upload.profile']);
 Route::patch('/user/upload/info', ['uses' => 'UserController@update', 'as' => 'user.update.info']);
-
 
 // Post
 Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);
