@@ -6,7 +6,7 @@
         $style = "background-color: #52768e;";
     ?>
     <div class="widget-user-header" style="{{ $style }}">
-        <h3 class="widget-user-username">{{ $author or 'Author' }}</h3>
+        <h4 class="widget-user-username">{{ $author or 'Author' }} <span style="font-size:15px;">&nbsp;php攻城狮</span> </h4>
         <h5 class="widget-user-desc">{{ $description or 'Description' }}</h5>
     </div>
     <div class="widget-user-image">
