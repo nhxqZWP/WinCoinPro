@@ -13,6 +13,7 @@
     <div class="container-fluid" style="margin-top: -15px;height:34px;">
         <nav class="navbar site-navbar" role="navigation">
             <div class="navbar-header">
+                {{--适配移动端 button--}}
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#blog-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -82,7 +83,7 @@
                     @endif
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="get" action="{{ route('search') }}">
-                    <input type="text" class="form-control" name="q" placeholder="搜索" required>
+                    <input type="text" class="form-control" name="q" placeholder="搜索" required >
                 </form>
             </div>
         </nav>
