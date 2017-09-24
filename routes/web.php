@@ -12,9 +12,9 @@
 */
 
 // Site route
-//Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
+Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
 
-Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
+//Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
 //github项目
 Route::get('/projects', ['uses' => 'HomeController@projects', 'as' => 'projects']);
 //搜索
