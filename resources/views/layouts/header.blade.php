@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ route('post.index') }}"
-                   class="navbar-brand">{{ $author or 'Blog' }}</a>
+                   class="navbar-brand">Blog</a>
             </div>
             <div class="collapse navbar-collapse fix-top" id="blog-navbar-collapse">
                 <ul class="nav navbar-nav">
