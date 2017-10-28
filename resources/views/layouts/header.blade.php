@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ route('post.index') }}"
-                   class="navbar-brand">Blog</a>
+                   class="navbar-brand">博客</a>
             </div>
             <div class="collapse navbar-collapse fix-top" id="blog-navbar-collapse">
                 <ul class="nav navbar-nav">
