@@ -43,7 +43,7 @@ Route::get('/{slug}', ['uses' => 'PostController@show', 'as' => 'post.show']);
 
 // Category
 Route::get('/category/{name}', ['uses' => 'CategoryController@show', 'as' => 'category.show']);
-Route::get('/category', ['uses' => 'CategoryController@index', 'as' => 'category.index']);
+Route::get('/blog/category', ['uses' => 'CategoryController@index', 'as' => 'category.index']);
 
 // Tag
 Route::get('/tag/{name}', ['uses' => 'TagController@show', 'as' => 'tag.show']);
