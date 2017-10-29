@@ -14,7 +14,7 @@
 // Site route
 //Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
 
-Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
+//Route::get('/', ['uses' => function () {return redirect('/blog');}, 'as' => 'index']);
 //github项目
 Route::get('/projects', ['uses' => 'HomeController@projects', 'as' => 'projects']);
 //搜索
@@ -38,8 +38,8 @@ Route::patch('/user/upload/profile', ['uses' => 'UserController@uploadProfile', 
 Route::patch('/user/upload/info', ['uses' => 'UserController@update', 'as' => 'user.update.info']);
 
 // Post
-Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);
-Route::get('/blog/{slug}', ['uses' => 'PostController@show', 'as' => 'post.show']);
+Route::get('/', ['uses' => 'PostController@index', 'as' => 'post.index']);
+Route::get('/{slug}', ['uses' => 'PostController@show', 'as' => 'post.show']);
 
 // Category
 Route::get('/category/{name}', ['uses' => 'CategoryController@show', 'as' => 'category.show']);
