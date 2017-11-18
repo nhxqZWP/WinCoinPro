@@ -20,8 +20,8 @@
                            </span>
             <span class="post-comments-count">
                            &nbsp;|&nbsp;
-                           <i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>
-                           <span>{{ $post->comments_count }}</span>
+                           <i class="fa fa-eye" aria-hidden="true"></i>
+                           <span>{{ $post->view_count }}</span>
                            </span>
         </div>
     </div>

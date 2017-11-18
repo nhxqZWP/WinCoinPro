@@ -12,11 +12,11 @@
 <header class="main-header">
     <div class="container-fluid" style="margin-top: -15px;height:34px;">
         <nav class="navbar site-navbar" role="navigation">
-            <div class="navbar-header">
+            <div class="navbar-header" style="">
                 {{--适配移动端 button--}}
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#blog-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
