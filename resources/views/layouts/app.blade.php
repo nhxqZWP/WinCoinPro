@@ -28,6 +28,7 @@
         ]); ?>
     </script>
     @include('widget.google_analytics')
+    <base target="_blank">
 </head>
 <body id="body">
 @include('layouts.header')
