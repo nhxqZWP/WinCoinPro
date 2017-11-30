@@ -31,7 +31,7 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ],[
-            'name.regex' => "Username can only contains letter,number or -,_",
+            'name.regex' => "用户名只能包含字母数字或者下划线奥～",
         ]);
 
         if (mb_substr_count($request->get('name'), '_') > 1 || mb_substr_count($request->get('name'), '-') > 1) {

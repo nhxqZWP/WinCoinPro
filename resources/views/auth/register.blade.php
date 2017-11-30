@@ -15,7 +15,7 @@
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name"
-                                           value="{{ old('name') }}" autofocus>
+                                           value="{{ old('name') }}" autofocus placeholder="用户名只能包含字母数字或者下划线 你懂的～">
 
                                     @if ($errors->has('name'))
                                         <span class="help-block">
