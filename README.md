@@ -1,4 +1,4 @@
-# Laravel Blog
+# wincoin.pro
 
 ## Features
 
@@ -24,11 +24,6 @@
 8. "laravel/tinker": "^1.0",
 9. "chumper/zipper": "1.0.x",
 10. "overtrue/laravel-filesystem-qiniu": "^0.0.3"
-
-
-## Thanks
-
-[Xblog](http://mind.lufficc.com/Xblog/)
 
 ## License
 
