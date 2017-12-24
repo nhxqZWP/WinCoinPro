@@ -74,10 +74,10 @@ class AdminController extends Controller
         $info['image_count'] = $this->imageRepository->count();
         $info['ip_count'] = Ip::count();
         $response = view('admin.index', compact('info'));
-        if (($failed_jobs_count = DB::table('failed_jobs')->count()) > 0) {
-            $failed_jobs_link = route('admin.failed-jobs');
-            $response->withErrors(['failed_jobs' => "You have $failed_jobs_count failed jobs.<a href='$failed_jobs_link'>View</a>"]);
-        }
+//        if (($failed_jobs_count = DB::table('failed_jobs')->count()) > 0) {
+//            $failed_jobs_link = route('admin.failed-jobs');
+//            $response->withErrors(['failed_jobs' => "You have $failed_jobs_count failed jobs.<a href='$failed_jobs_link'>View</a>"]);
+//        }
         return $response;
     }
 

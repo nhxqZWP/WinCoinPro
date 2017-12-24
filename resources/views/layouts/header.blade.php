@@ -22,15 +22,33 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ route('post.index') }}"
-                   class="navbar-brand">博客</a>
+                   class="navbar-brand">赢币网</a>
             </div>
             <div class="collapse navbar-collapse fix-top" id="blog-navbar-collapse">
                 <ul class="nav navbar-nav">
+                    @forelse($categories as $category)
+                        @if(str_contains(urldecode(request()->getPathInfo()),'category/'.$category->name))
+                            <li>
+                                <a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" class="menu-item menu-active">
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                        @else
+                            <li>
+                                <a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" class="menu-item">
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                        @endif
+                    @empty
+                        <p class="meta-item center-block">No categories.</p>
+                    @endforelse
                     <li><a class="menu-item" href="{{ route('achieve') }}">时光轴</a></li>
-                    <li><a class="menu-item" href="{{ route('category.index') }}">全部分类</a></li>
+                    {{--<li><a class="menu-item" href="{{ route('category.index') }}">全部分类</a></li>--}}
                     @if(XblogConfig::getValue('github_username'))
                         <li><a class="menu-item" href="{{ route('projects') }}">Github项目</a></li>
                     @endif
+
                     @foreach($pages as $page)
                         <li><a class="menu-item"
                                href="{{ route('page.show',$page->name) }}">{{ $page->display_name }}</a></li>
@@ -78,8 +96,8 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{ url('login') }}" class="b">登录</a></li>
-                        <li><a href="{{ url('register') }}" class="b">注册</a></li>
+                        <li><a href="{{ url('login') }}" class="b-l">登录</a></li>
+                        <li><a href="{{ url('register') }}" class="b-r">注册</a></li>
                     @endif
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="get" action="{{ route('search') }}">
@@ -88,27 +106,27 @@
             </div>
         </nav>
     </div>
-    <hr style="width:96%;">
-    <div style="height:8px;">
-        <div class="collapse navbar-collapse ">
-        <ul class="head-category">
-            @forelse($categories as $category)
-                @if(str_contains(urldecode(request()->getPathInfo()),'category/'.$category->name))
-                    <a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" class="category-active">
-                        {{ $category->name }}
-                    </a>
-                @else
-                    <a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" >
-                        {{ $category->name }}
-                    </a>
-                @endif
-            @empty
-                <p class="meta-item center-block">No categories.</p>
-            @endforelse
-        </ul>
-        </div>
+    {{--<hr style="width:96%;">--}}
+    {{--<div style="height:8px;">--}}
+        {{--<div class="collapse navbar-collapse ">--}}
+        {{--<ul class="head-category">--}}
+            {{--@forelse($categories as $category)--}}
+                {{--@if(str_contains(urldecode(request()->getPathInfo()),'category/'.$category->name))--}}
+                    {{--<a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" class="category-active">--}}
+                        {{--{{ $category->name }}--}}
+                    {{--</a>--}}
+                {{--@else--}}
+                    {{--<a title="{{ $category->name }}" href="{{ route('category.show',$category->name) }}" >--}}
+                        {{--{{ $category->name }}--}}
+                    {{--</a>--}}
+                {{--@endif--}}
+            {{--@empty--}}
+                {{--<p class="meta-item center-block">No categories.</p>--}}
+            {{--@endforelse--}}
+        {{--</ul>--}}
+        {{--</div>--}}
         {{--<div class="container-fluid">--}}
         {{--<div class="description">{{ $description or 'Stay Hungry. Stay Foolish.' }}</div>--}}
         {{--</div>--}}
-    </div>
+    {{--</div>--}}
 </header>

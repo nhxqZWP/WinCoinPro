@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="{{ route('post.index') }}">博客</a></li>
+            <li><a href="{{ route('post.index') }}">文章</a></li>
             <li><a href="{{ route('category.index') }}">分类</a></li>
             <li class="active">{{ $name }}</li>
         </ol>
