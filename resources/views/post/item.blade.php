@@ -27,8 +27,8 @@
     </div>
     {{--post content--}}
     <div class="post-description">
-        {{--<p class="markdown-target" data-markdown="{{ $post->description }}">
-        </p>--}}
+        {{--<p class="markdown-target" data-markdown="{{ $post->description }}">--}}
+        {{--</p>--}}
         {!! $post->description !!}
     </div>
     {{--post footer--}}
