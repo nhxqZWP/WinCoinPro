@@ -4,26 +4,26 @@
         <h1 class="post-title">
             <a title="{{ $post->title }}" href="{{ route('post.show',$post->slug) }}">{{ $post->title }}</a>
         </h1>
-        <div class="post-meta">
-                           <span class="post-time">
-                           <i class="fa fa-calendar-o"></i>
-                           <time datetime="2016-08-05T00:10:14+08:00">
-                           {{ $post->created_at->format('Y-m-d') }}
-                           </time>
-                           </span>
-            <span class="post-category">
-                           &nbsp;|&nbsp;
-                           <i class="fa fa-folder-o"></i>
-                           <a href="{{ route('category.show',$post->category->name) }}">
-                           {{ $post->category->name }}
-                           </a>
-                           </span>
-            <span class="post-comments-count">
-                           &nbsp;|&nbsp;
-                           <i class="fa fa-eye" aria-hidden="true"></i>
-                           <span>{{ $post->view_count }}</span>
-                           </span>
-        </div>
+        {{--<div class="post-meta">--}}
+                           {{--<span class="post-time">--}}
+                           {{--<i class="fa fa-calendar-o"></i>--}}
+                           {{--<time datetime="2016-08-05T00:10:14+08:00">--}}
+                           {{--{{ $post->created_at->format('Y-m-d') }}--}}
+                           {{--</time>--}}
+                           {{--</span>--}}
+            {{--<span class="post-category">--}}
+                           {{--&nbsp;|&nbsp;--}}
+                           {{--<i class="fa fa-folder-o"></i>--}}
+                           {{--<a href="{{ route('category.show',$post->category->name) }}">--}}
+                           {{--{{ $post->category->name }}--}}
+                           {{--</a>--}}
+                           {{--</span>--}}
+            {{--<span class="post-comments-count">--}}
+                           {{--&nbsp;|&nbsp;--}}
+                           {{--<i class="fa fa-eye" aria-hidden="true"></i>--}}
+                           {{--<span>{{ $post->view_count }}</span>--}}
+                           {{--</span>--}}
+        {{--</div>--}}
     </div>
     {{--post content--}}
     <div class="post-description">
@@ -33,8 +33,28 @@
     </div>
     {{--post footer--}}
     <div class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <i class="fa fa-tags"></i>
+        <div class="pull-left tag-list" style="width:550px">
+            {{--<div class="post-meta">--}}
+                           <span class="post-time">
+                           <i class="fa fa-calendar-o"></i>
+                           <time datetime="2016-08-05T00:10:14+08:00">
+                           {{ $post->created_at->format('Y-m-d') }}
+                           </time>
+                           </span>
+                <span class="post-category">
+                           &nbsp;|&nbsp;
+                           <i class="fa fa-folder-o"></i>
+                           <a href="{{ route('category.show',$post->category->name) }}">
+                           {{ $post->category->name }}
+                           </a>
+                           </span>
+                <span class="post-comments-count">
+                           &nbsp;|&nbsp;
+                           <i class="fa fa-eye" aria-hidden="true"></i>
+                           <span>{{ $post->view_count }}</span>
+                           </span>
+            {{--</div>--}}
+            <i class="fa fa-tags col-sm-offset-1"></i>
             @foreach($post->tags as $tag)
                 <a  class="tag" href="{{ route('tag.show',$tag->name) }}">{{ $tag->name }}</a>
             @endforeach
